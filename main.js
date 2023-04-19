@@ -1,14 +1,29 @@
-create function for getComputerChoice
-assign getComputerChoice to computerSelection
+const gameChoices = ['rock', 'paper', 'scissors'];
 
-receive input from user of Rock Paper or Scissors
-assign user input to playerSelection
-make selection case-insensitive
+function getComputerChoice(array){
+    const random = Math.floor(Math.random()*array.length);
+    return array[random];
+  }
 
-compare playerSelection to computerSelection
+let computerSelection = getComputerChoice(gameChoices);
 
-return string declaring winner
+console.log(computerSelection);
 
-function game() to reset game 5 Time
+  
+//create function for getComputerChoice
+//assign getComputerChoice to computerSelection
 
-keep count of games won and lost
+let playerSelection = prompt("Let's Play! Choose One: ROCK, PAPER, SCISSORS");
+console.log(playerSelection);
+
+//receive input from user of Rock Paper or Scissors
+//assign user input to playerSelection
+//make selection case-insensitive
+
+//compare playerSelection to computerSelection
+
+//return string declaring winner
+
+//function game() to reset game 5 Time
+
+//keep count of games won and lost
