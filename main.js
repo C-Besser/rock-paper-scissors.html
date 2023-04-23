@@ -27,28 +27,43 @@ console.log(playerSelection);
 //compare playerSelection to computerSelection
 
 function playRound(playerSelection, computerSelection) {
-  if playerSelection === computerSelection {
+  if (playerSelection === computerSelection) {
     return `${playerSelection} ties with ${computerSelection}!`;
-  } else if playerSelection = 'rock' {
-    if computerSelection = 'scissors' {
-      return "You lose! Scissors beats rock!";
+  } 
+  else if (playerSelection = 'rock') {
+    if (computerSelection = 'scissors') {
+      return "You win! Rock beats scissors!";
+    } else {
+      return "You lose! Paper beats rock!";
     }
-    else computerSelection = 'paper'{
-      return "You win! Rock beats paper!";
+  } else if (playerSelection = 'paper') {
+    if (computerSelection = 'rock') {
+      return "You win! Paper beats rock!";
     }
-} else if playerSelection = 'paper' {
-
+    else {
+      return "You lose! Scissors beats paper!";
+   }
+  } else if (playerSelection = 'scissors') {
+    if (computerSelection = 'rock') {
+      return "You lose! Rock beats scissors!";
+    }
+    else {
+    return "You win! Scissors beats paper!";
+    }
+  }
 }
 
-if playerSelection === 'rock' {
+if (playerSelection === 'rock') {
   playRound();
-} else if playerSelection === 'paper' {
+} else if (playerSelection === 'paper') {
   playRound();
-} else if playerSelection === 'scissors' {
+} else if (playerSelection === 'scissors') {
   playRound();
 } else {
   alert("You did not enter a valid choice.")
-}
+};
+
+console.log(playRound(playerSelection, computerSelection));
 
 //return string declaring winner
 
