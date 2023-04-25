@@ -1,4 +1,5 @@
-const gameChoices = ['rock', 'paper', 'scissors'];
+function game(){
+  const gameChoices = ['rock', 'paper', 'scissors'];
 //create function for getComputerChoice
 //assign getComputerChoice to computerSelection
 
@@ -30,21 +31,22 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     return `${playerSelection} ties with ${computerSelection}!`;
   } 
-  else if (playerSelection = 'rock') {
-    if (computerSelection = 'scissors') {
-      return "You win! Rock beats scissors!";
-    } else {
-      return "You lose! Paper beats rock!";
-    }
-  } else if (playerSelection = 'paper') {
-    if (computerSelection = 'rock') {
+  else if (playerSelection === 'paper') {
+    if (computerSelection === 'rock') {
       return "You win! Paper beats rock!";
     }
     else {
       return "You lose! Scissors beats paper!";
    }
-  } else if (playerSelection = 'scissors') {
-    if (computerSelection = 'rock') {
+  }
+   else if (playerSelection === 'rock') {
+    if (computerSelection === 'scissors') {
+      return "You win! Rock beats scissors!";
+    } else {
+      return "You lose! Paper beats rock!";
+    }
+  } else {
+    if (computerSelection === 'rock') {
       return "You lose! Rock beats scissors!";
     }
     else {
@@ -64,6 +66,13 @@ if (playerSelection === 'rock') {
 };
 
 console.log(playRound(playerSelection, computerSelection));
+}
+
+game();
+game();
+game();
+game();
+game();
 
 //return string declaring winner
 
